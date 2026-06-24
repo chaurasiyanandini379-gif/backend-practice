@@ -31,6 +31,7 @@ router.get(
 
 router.get(
     "/:id",
+    verifyToken,
     userController.getUserById
 );
 
@@ -44,6 +45,7 @@ router.put(
 
 router.delete(
     "/delete/:id",
+    verifyToken,
     userController.deleteUser
 );
 
